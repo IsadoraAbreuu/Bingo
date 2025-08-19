@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;  
+}
+
+nav {
+    display: flex;
+    background-color: transparent;
+    gap: 100px;
+}
+
+nav figure img {
+    width: 180px;
+
+}
