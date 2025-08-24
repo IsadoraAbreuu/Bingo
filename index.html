@@ -3,31 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BINGO - FrontEnd</title>
+    <title>BINGO | FrontEnd</title>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="imgs/favicon.ico">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <nav>
         <figure>
             <img src="imgs/homer_rosquinha.png" alt="homer simpsons de ponta cabeça segurando uma rosquinha"/>
         </figure>
-
-        <h3>Regras</h3>
-        <h3>Recomeçar</h3>
-        <h3>mudar tema escuro</h3>
+        <section class="acoes">
+            <h3>Regras</h3>
+            <h3>Recomeçar</h3>
+            <h3>mudar tema escuro</h3>
+        </section>
     </nav>
 
-    <video class="video-background" autoplay muted loop>
-        <source src="imgs/855005-hd_1920_1080_30fps.mp4" type="video/mp4">
+    
+
+    <video class="videoBackground" autoplay muted loop>
+        <source src="imgs/Design sem nome.mp4" type="video/mp4">
     </video>
 
-    <div class="content">
+    <div class="overlay"></div>
+
+    <section class="letreiro">
         <figure>
             <img src="imgs/letreiro.png" alt="letreiro do simpsons">
         </figure>
-    </div>
+    </section>
+
+    <button onclick="sorteador()">Sortear número</button>
+
+    
 </body>
 </html>
