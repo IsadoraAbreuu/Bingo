@@ -52,3 +52,29 @@ nav figure img {
     object-fit: cover; /* Ajusta o vídeo sem distorcer */
     z-index: -1;
 }
+
+
+.regras {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip {
+    display: none; /* fica escondido */
+    position: absolute;
+    top: 100%; /* abaixo do h3 */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+.regras:hover .tooltip {
+    display: block; /* mostra ao passar o mouse */
+}

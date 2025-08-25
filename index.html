@@ -16,9 +16,16 @@
             <img src="imgs/homer_rosquinha.png" alt="homer simpsons de ponta cabeça segurando uma rosquinha"/>
         </figure>
         <section id="acoes">
-            <h3>Regras</h3>
-            <h3>Recomeçar</h3>
-            <h3>mudar tema escuro</h3>
+            <div class="regras"><h3>Regras</h3>
+             <div class="tooltip">
+                <p>1. Cada jogador tem uma cartela com números.</p>
+                <p>2. O sorteador anuncia números aleatórios.</p>
+                <p>3. O primeiro a completar uma linha, coluna ou diagonal vence.</p>
+                <p>4. Divirta-se!</p>
+                <h5>PS: Esse é apenas o sorteador, arrume algumas cartelas para jogar 😆</h5>
+            </div>
+            </div>
+            <h3 id="reset">Recomeçar</h3>
         </section>
     </nav>
 
@@ -36,12 +43,12 @@
         </figure>
     </section>
 
-    <section id="bingo">
-        <div class="coluna"><p id="B">B</p><div id="num"></div></div>
-        <div class="coluna"><p id="I">I</p><div id="resultadoFinal"></div></div>
-        <div class="coluna"><p id="N">N</p><div id="resultadoFinal"></div></div>
-        <div class="coluna"><p id="G">G</p><div id="resultadoFinal"></div></div>
-        <div class="coluna"><p id="O">O</p><div id="resultadoFinal"></div></div>
+    <section id="colunasBingo">    
+        <div class="coluna" id="colunaB"><h3>B</h3></div>
+        <div class="coluna" id="colunaI"><h3>I</h3></div>
+        <div class="coluna" id="colunaN"><h3>N</h3></div>
+        <div class="coluna" id="colunaG"><h3>G</h3></div>
+        <div class="coluna" id="colunaO"><h3>O</h3></div>
     </section>
 
     <button id="sortear">Sortear número</button>

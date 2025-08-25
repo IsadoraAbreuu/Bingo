@@ -32,14 +32,44 @@ function sorteador() {
 
     document.getElementById("resultado").textContent = resultadoFinal;
 
+    let numeroDiv = document.createElement("div");
+    numeroDiv.className = "numero";
+    numeroDiv.textContent = numeroSorteado;
+
+    if (letra === "B")document.getElementById("colunaB").appendChild(numeroDiv);
+    else if (letra === "I")document.getElementById("colunaI").appendChild(numeroDiv);
+    else if (letra === "N")document.getElementById("colunaN").appendChild(numeroDiv);
+    else if (letra === "G")document.getElementById("colunaG").appendChild(numeroDiv);
+    else document.getElementById("colunaO").appendChild(numeroDiv);
+
+
     return resultadoFinal;
 
     
 }
 
+function resetar() {
+    // reinicia a lista de 1 a 75
+    todosNumeros = [];
+    for (let i = 1; i <= 75; i++) {
+        todosNumeros.push(i);
+    }
+
+    // limpa todas as colunas
+    ["B","I","N","G","O"].forEach(letra => {
+        const coluna = document.getElementById("coluna" + letra);
+        coluna.innerHTML = `<h3>${letra}</h3>`;
+    });
+
+    // reseta o resultado
+    document.getElementById("resultado").textContent = "---";
+}
+
+
 document.getElementById("sortear").addEventListener("click", sorteador);
 
-console.log();
-console.log(sorteador());
-console.log(sorteador());
+document.getElementById("reset").addEventListener("click", resetar);
+
+
+
 
