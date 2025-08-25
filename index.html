@@ -10,12 +10,12 @@
     <link rel="icon" type="image/png" href="imgs/favicon.ico">
     <script src="script.js" defer></script>
 </head>
-<body>
+<body class="html">
     <nav>
         <figure>
             <img src="imgs/homer_rosquinha.png" alt="homer simpsons de ponta cabeça segurando uma rosquinha"/>
         </figure>
-        <section class="acoes">
+        <section id="acoes">
             <h3>Regras</h3>
             <h3>Recomeçar</h3>
             <h3>mudar tema escuro</h3>
@@ -36,7 +36,17 @@
         </figure>
     </section>
 
-    <button onclick="sorteador()">Sortear número</button>
+    <section id="bingo">
+        <div class="coluna"><p id="B">B</p><div id="num"></div></div>
+        <div class="coluna"><p id="I">I</p><div id="resultadoFinal"></div></div>
+        <div class="coluna"><p id="N">N</p><div id="resultadoFinal"></div></div>
+        <div class="coluna"><p id="G">G</p><div id="resultadoFinal"></div></div>
+        <div class="coluna"><p id="O">O</p><div id="resultadoFinal"></div></div>
+    </section>
+
+    <button id="sortear">Sortear número</button>
+
+    <section id="containerResultado">Número sorteado: <p id="resultado">---</p></section>
 
     
 </body>

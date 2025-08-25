@@ -8,7 +8,7 @@ for (let i = 1; i <= 75; i++) {
 function sorteador() {
     //condição para quando o tamanho da lista for 0
     if (todosNumeros.length == 0) {
-        return "TODOS os números já foram SORTEADOS !";
+        return alert("TODOS os números já foram SORTEADOS !"); 
     }
 
     //gera índice aleatório
@@ -28,10 +28,18 @@ function sorteador() {
     else if (numeroSorteado <= 60) letra = "G";
     else letra = "O";
 
-    return letra + " " + numeroSorteado;
+    let resultadoFinal = letra + numeroSorteado;
+
+    document.getElementById("resultado").textContent = resultadoFinal;
+
+    return resultadoFinal;
+
+    
 }
 
-console.log(sorteador());
+document.getElementById("sortear").addEventListener("click", sorteador);
+
+console.log();
 console.log(sorteador());
 console.log(sorteador());
 
