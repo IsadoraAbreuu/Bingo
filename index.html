@@ -11,50 +11,75 @@
     <script src="script.js" defer></script>
 </head>
 <body class="html">
+    <!-- Navegação principal -->
     <nav>
         <figure>
+            <!-- Imagem do Homer segurando uma rosquinha -->
             <img src="imgs/homer_rosquinha.png" alt="homer simpsons de ponta cabeça segurando uma rosquinha"/>
         </figure>
+
+        <!-- Seção de ações com regras e botão recomeçar -->
         <section id="acoes">
-            <div class="regras"><h3>Regras</h3>
-             <div class="tooltip">
-                <p>1. Cada jogador tem uma cartela com números.</p>
-                <p>2. O sorteador anuncia números aleatórios.</p>
-                <p>3. O primeiro a completar uma linha, coluna ou diagonal vence.</p>
-                <p>4. Divirta-se!</p>
-                <h5>PS: Esse é apenas o sorteador, arrume algumas cartelas para jogar 😆</h5>
+            <div class="regras"><h3>REGRAS</h3>
+                <div class="tooltip">
+                    <!-- Regras do jogo -->
+                    <p>1. Cada jogador tem uma cartela com números.</p>
+                    <p>2. O sorteador anuncia números aleatórios.</p>
+                    <p>3. O primeiro a completar uma linha, coluna ou diagonal vence.</p>
+                    <p>4. Divirta-se!</p>
+                    <h5>PS: Esse é apenas o sorteador, arrume algumas cartelas para jogar 😆</h5>
+                </div>
             </div>
-            </div>
-            <h3 id="reset">Recomeçar</h3>
+            <!-- Botão para reiniciar o jogo -->
+            <h3 id="reset">RECOMEÇAR</h3>
         </section>
     </nav>
 
-    <video class="videoBackground" autoplay muted loop>
-        <source src="imgs/Design sem nome.mp4" type="video/mp4">
-    </video>
+    <main>
+        <!-- Vídeo de fundo, rodando automaticamente sem som e em loop -->
+        <video class="videoBackground" autoplay muted loop>
+            <source src="imgs/Design sem nome.mp4" type="video/mp4" aria-label="video do ceu">
+        </video>
 
-    <div class="overlay"></div>
-    
-    <section id="containerColunas">
-        <section id="colunasBingo">    
-            <div class="coluna" id="colunaB"><h3>B</h3></div>
-            <div class="coluna" id="colunaI"><h3>I</h3></div>
-            <div class="coluna" id="colunaN"><h3>N</h3></div>
-            <div class="coluna" id="colunaG"><h3>G</h3></div>
-            <div class="coluna" id="colunaO"><h3>O</h3></div>
-        </section>
-    </section>
-
-    <section class="letreiro">
-        <figure>
-            <img src="imgs/letreiro.png" alt="letreiro do simpsons">
+        <!-- Imagem do Bart na lateral da tela -->
+        <figure id="bartLateral">
+            <img src="imgs/Bingo Simpsons.png" alt="bart na lateral">
         </figure>
-    </section>
 
-    <section id="containerSortear">
-        <section id="containerResultado"><h3>Número sorteado: </h3><p id="resultado">---</p></section>
-        <button id="sortear"><p>Sortear número<p></button>
-    </section>
+        <!-- Para escurecer o vídeo -->
+        <div class="overlay"></div>
+
+        <!-- Container para mostrar o número sorteado e botão para sortear -->
+        <article id="containerSortear">
+            <section id="containerResultado"><h3>Número sorteado: </h3><p id="resultado">---</p></section>
+            <button id="sortear"><p>Sortear número<p></button>
+        </article>
+
+        <!-- Conteúdo principal do jogo -->
+        <section id="containerConteudo">
+            <!-- Letreiro do simpsons - imagem -->
+            <section class="letreiro">
+                <figure>
+                    <img src="imgs/letreiro.png" alt="letreiro do simpsons">
+                </figure>
+            </section>
+            <!-- Container com as colunas do bingo -->
+            <article id="containerColunas">
+                <section id="colunasBingo">   
+                    <!-- Colunas B, I, N, G, O para aparecer os numeros sorteados --> 
+                    <div class="coluna" id="colunaB"><h3>B</h3></div>
+                    <div class="coluna" id="colunaI"><h3>I</h3></div>
+                    <div class="coluna" id="colunaN"><h3>N</h3></div>
+                    <div class="coluna" id="colunaG"><h3>G</h3></div>
+                    <div class="coluna" id="colunaO"><h3>O</h3></div>
+                </section>
+            </article>
+        </section>
+    </main>
+
+    <!-- Biblioteca externa para efeitos de confetes -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
 
     
 </body>

@@ -8,7 +8,11 @@ for (let i = 1; i <= 75; i++) {
 function sorteador() {
     //condição para quando o tamanho da lista for 0
     if (todosNumeros.length == 0) {
-        return alert("TODOS os números já foram SORTEADOS !"); 
+        //da alert dizendo que todos os numeros foram sorteados
+        alert("TODOS os números já foram SORTEADOS !"); 
+        //dispara confetes na tela
+        disparaConfete();
+        return;
     }
 
     //gera índice aleatório
@@ -28,14 +32,18 @@ function sorteador() {
     else if (numeroSorteado <= 60) letra = "G";
     else letra = "O";
 
+    //armazena em uma variavel a letra junto com o numero
     let resultadoFinal = letra + numeroSorteado;
 
+    //mostra resultado no HTML
     document.getElementById("resultado").textContent = resultadoFinal;
 
+    //cria uma nova div a cada resultado sorteado
     let numeroDiv = document.createElement("div");
     numeroDiv.className = "numero";
     numeroDiv.textContent = numeroSorteado;
 
+    //condição para append na coluna certa de acordo com a letra do numero sorteado
     if (letra === "B")document.getElementById("colunaB").appendChild(numeroDiv);
     else if (letra === "I")document.getElementById("colunaI").appendChild(numeroDiv);
     else if (letra === "N")document.getElementById("colunaN").appendChild(numeroDiv);
@@ -48,6 +56,7 @@ function sorteador() {
     
 }
 
+//função para resetar o bingo
 function resetar() {
     // reinicia a lista de 1 a 75
     todosNumeros = [];
@@ -65,9 +74,28 @@ function resetar() {
     document.getElementById("resultado").textContent = "---";
 }
 
-
+//funcao para disparar os confetes com biblioteca externa assim que todos os numeros forem sorteados
+function disparaConfete() {
+    confetti({
+        particleCount: 200,
+        spread: 120,
+        origin: { y: 0.6 }
+    });
+  
+// Segundo disparo com menos partículas após meio segundo
+    setTimeout(() => {
+        confetti({
+            particleCount: 150,
+            spread: 100,
+            origin: { y: 0.6 }
+        });
+    }, 500);
+}
+  
+//adiciona evento de clique no botão sortear, chamando a função sortear
 document.getElementById("sortear").addEventListener("click", sorteador);
 
+//adiciona evento de clique no botão reset, chamando a funçao resetar
 document.getElementById("reset").addEventListener("click", resetar);
 
 
