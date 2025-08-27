@@ -33,5 +33,5 @@ Este projeto foi desenvolvido com as tecnologias **HTML, CSS e JavaScript**, e t
 - ✅ Interface simples e divertida  
 - ✅ Ideal para partidas de bingo com amigos ou família
 
-  ![Homer Simpson GIF](https://tenor.com/pt-BR/view/the-simpsons-homer-simpson-homer-in-bush-los-simpsons-homero-simpson-gif-18987298)
+![Homer Simpson GIF](https://media.tenor.com/LMuHrXvRHLQAAAAi/the-simpsons-homer-simpson.gif)
 
